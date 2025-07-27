@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Feliz 1er Aniversario</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #ffe6f0, #ffffff);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #4d194d;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            margin-top: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-top: 30px;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.7em;
+            text-align: justify;
+            margin: 20px;
+        }
+
+        /* Corazones cayendo */
+        .heart {
+            position: fixed;
+            top: -10px;
+            font-size: 24px;
+            color: red;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <audio autoplay loop>
+        <source src="reina_pepiada.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio HTML5.
+    </audio>
+
+    <div class="container">
+        <h1>💌 Nuestro primer año, tú y yo</h1>
+        <img src="foto.jpeg" alt="Nuestra foto">
+
+        <p>La primera vez que te vi fue en el colegio, con una mirada a lo lejos. No imaginaba que esa simple mirada sería el inicio de algo tan bonito. Desde ese día, algo dentro de mí supo que tú eras especial, distinta, alguien que quería conocer y cuidar.</p>
+
+        <p>Pasamos por muchas cosas, ¿recuerdas? Las peleas que nos dolieron, pero que nos enseñaron a ser fuertes. Los momentos felices, como cuando compartíamos risas en el río o en tu casa. Cada instante, bueno o difícil, fue construyendo este amor que hoy celebramos.</p>
+
+        <p>Cuando te fuiste a estudiar a Quito, sentí miedo. Miedo de la distancia, de los silencios, de no poder abrazarte cuando más quería. Pero a pesar de eso, nunca dejé de amarte. Cada mensaje, cada videollamada, cada “te extraño” que nos dijimos, fue una promesa silenciosa de que seguiríamos juntos, pase lo que pase.</p>
+
+        <p>Y aquí estamos… un año después. Más fuertes, más unidos, más enamorados. Este primer año ha sido una mezcla de risas, retos, aprendizajes y amor. Me haces sentir muy especial, y cada sonrisa tuya me da fuerzas para seguir adelante.</p>
+
+        <p>Gracias por elegirme, por seguir a mi lado, por amarme con cada parte de ti. Este aniversario no es solo una fecha: es la prueba de que cuando dos personas se aman de verdad, nada los detiene.</p>
+
+        <h2>💖 Feliz 1er aniversario, mi vida.</h2>
+        <p><strong>Recuerda que siempre estaremos juntos, porque somos tú, yo y Dios.</strong></p>
+    </div>
+
+    <script>
+        // Crear corazones dinámicamente
+        const totalHearts = 50;
+        for (let i = 0; i < totalHearts; i++) {
+            let heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (2 + Math.random() * 3) + 's';
+            heart.textContent = '❤️';
+            document.body.appendChild(heart);
+        }
+    </script>
+</body>
+</html>
